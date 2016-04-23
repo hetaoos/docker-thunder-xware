@@ -4,5 +4,6 @@ fi
 
 docker run -d \
         --name=xware \
-        -v $(pwd)/data:/app/TDDOWNLOAD \
-        yinheli/docker-thunder-xware:latest
+        --restart=always \
+        -v $(pwd)/data:/app/mnt/TDDOWNLOAD \
+        hetaoos/docker-thunder-xware:latest
